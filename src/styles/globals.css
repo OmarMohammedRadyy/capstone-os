@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   CAPSTONE OS — OFFICIAL BRAND & DESIGN SYSTEM TOKENS
+   Aesthetic: Quiet Luxury × Editorial Productivity × Calm Professional Tech
+   Palette: Deep Forest Green (#163A24) + Refined Gold (#C89B2C) + Warm Copper (#B4653A)
+   80% Warm Editorial Neutrals | 15% Forest Green | 5% Gold & Copper Accents
+   ========================================================================== */
+
+:root {
+  /* Official Forest, Gold, Copper & Editorial Scales (Cinematic Experience Spec) */
+  --forest-950: #07110A;
+  --forest-900: #0D1C11;
+  --forest-850: #112719;
+  --forest-800: #163522;
+  --forest-700: #214B30;
+  --forest-600: #30643F;
+  --forest-500: #477C55;
+  --forest-300: #8DAE95;
+  --forest-100: #DFE9E1;
+  --forest-50: #F3F7F4;
+
+  --gold-700: #98701E;
+  --gold-600: #B38627;
+  --gold-500: #C9A13C;
+  --gold-300: #DBC477;
+  --gold-100: #F3EACB;
+
+  --copper-700: #774225;
+  --copper-600: #95542E;
+  --copper-500: #B86A39;
+  --copper-300: #D39B79;
+
+  --neutral-light-bg: #F6F5F1;
+  --neutral-light-surface: #FFFFFF;
+  --neutral-light-muted: #EFECE5;
+  --neutral-light-border: #DDD8CE;
+  --neutral-light-text: #111612;
+  --neutral-light-subtext: #59635B;
+
+  --neutral-dark-bg: #08110B;
+  --neutral-dark-surface: #0F1D14;
+  --neutral-dark-elevated: #14261A;
+  --neutral-dark-border: #203728;
+  --neutral-dark-text: #F2F4F1;
+  --neutral-dark-subtext: #9AA99E;
+
+  /* Motion Timing Tokens */
+  --motion-micro: 140ms cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-component: 260ms cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-scene: 650ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Perceptually Tuned Brand Scales */
+  --green-950: #0A1F13;
+  --green-900: #12301E;
+  --green-800: #163A24;
+  --green-700: #1E4D30;
+  --green-600: #276741;
+  --green-500: #34A866;
+  --green-400: #52BF80;
+  --green-300: #83D4A3;
+  --green-200: #B7E6C9;
+  --green-100: #DCF2E4;
+  --green-50: #EFF8F2;
+
+  --gold-900: #4E3A0B;
+  --gold-700: #9A731B;
+  --gold-600: #C89B2C;
+  --gold-500: #DFB244;
+  --gold-200: #F4E2B0;
+  --gold-50: #FBF7EB;
+
+  --copper-700: #8F4D28;
+  --copper-600: #B4653A;
+  --copper-500: #D48256;
+  --copper-50: #FAF1EC;
+
+  /* 1. Surfaces & Canvas (Light Mode — Warm Editorial Ivory) */
+  --background: #F8F7F4;
+  --canvas: #F8F7F4;
+  --surface-canvas: #F8F7F4;
+  --surface: #FFFFFF;
+  --surface-elevated: #FCFBF9;
+  --surface-subtle: #F2F0EA;
+  --surface-muted: #F2F0EA;
+  --surface-hover: #EAE7DF;
+
+  /* 2. Typography Ink (Near-Black with Subtle Forest Undertone) */
+  --foreground: #111814;
+  --ink: #111814;
+  --foreground-secondary: #4A544E;
+  --ink-secondary: #4A544E;
+  --foreground-muted: #76827B;
+  --ink-muted: #76827B;
+  --ink-tertiary: #76827B;
+
+  /* 3. Borders & Dividers */
+  --border: #E2E0D8;
+  --border-subtle: #ECEAE3;
+  --border-strong: #C7C4B8;
+
+  /* 4. Primary Brand Identity (Deep Forest Green) */
+  --primary: #163A24;
+  --primary-hover: #1E4D30;
+  --primary-active: #12301E;
+  --primary-subtle: #EFF8F2;
+  --primary-foreground: #FFFFFF;
+
+  /* Alias --accent to Primary Forest Green for seamless interactive consistency,
+     plus dedicated Gold & Copper tokens for highlights */
+  --accent: #163A24;
+  --accent-hover: #1E4D30;
+  --accent-subtle: #EFF8F2;
+
+  --gold: #C89B2C;
+  --gold-text: #8A6514;
+  --gold-subtle: #FBF7EB;
+  --gold-border: #F4E2B0;
+
+  --copper: #B4653A;
+  --copper-text: #8F4D28;
+  --copper-subtle: #FAF1EC;
+
+  /* 5. Semantic Status Colors */
+  --success: #166534;
+  --success-subtle: #EAF6EE;
+  --warning: #9A6700;
+  --warning-subtle: #FDF5E6;
+  --danger: #B91C1C;
+  --danger-subtle: #FDECEC;
+  --info: #1E4D30;
+  --info-subtle: #EFF8F2;
+
+  /* 6. Radius & Elevation Hierarchy */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-xs: 0 1px 2px 0 rgba(17, 24, 20, 0.04);
+  --shadow-sm: 0 2px 6px -1px rgba(17, 24, 20, 0.06), 0 1px 2px -1px rgba(17, 24, 20, 0.04);
+  --shadow-modal: 0 20px 32px -8px rgba(10, 31, 19, 0.16), 0 8px 14px -6px rgba(10, 31, 19, 0.08);
+}
+
+.dark {
+  /* 1. Surfaces & Canvas (Dark Mode — Deep Forest Charcoal, NEVER #000000) */
+  --background: #0B110E;
+  --canvas: #0B110E;
+  --surface-canvas: #0B110E;
+  --surface: #111915;
+  --surface-elevated: #17221C;
+  --surface-subtle: #16201A;
+  --surface-muted: #16201A;
+  --surface-hover: #1E2C24;
+
+  /* 2. Typography Ink */
+  --foreground: #ECEFE9;
+  --ink: #ECEFE9;
+  --foreground-secondary: #9BA8A0;
+  --ink-secondary: #9BA8A0;
+  --foreground-muted: #68756D;
+  --ink-muted: #68756D;
+  --ink-tertiary: #68756D;
+
+  /* 3. Borders & Dividers */
+  --border: #223028;
+  --border-subtle: #1A251F;
+  --border-strong: #314539;
+
+  /* 4. Primary Brand Identity (Luminous Forest Sage in Dark Mode) */
+  --primary: #2D8A56;
+  --primary-hover: #34A866;
+  --primary-active: #236E44;
+  --primary-subtle: rgba(52, 168, 102, 0.14);
+  --primary-foreground: #FFFFFF;
+
+  --accent: #34A866;
+  --accent-hover: #52BF80;
+  --accent-subtle: rgba(52, 168, 102, 0.14);
+
+  --gold: #DFB244;
+  --gold-text: #F0CA67;
+  --gold-subtle: rgba(223, 178, 68, 0.12);
+  --gold-border: rgba(223, 178, 68, 0.28);
+
+  --copper: #D48256;
+  --copper-text: #E59A72;
+  --copper-subtle: rgba(212, 130, 86, 0.12);
+
+  /* 5. Semantic Status Colors (Dark Mode) */
+  --success: #4ADE80;
+  --success-subtle: rgba(74, 222, 128, 0.12);
+  --warning: #FBBF24;
+  --warning-subtle: rgba(251, 191, 36, 0.12);
+  --danger: #F87171;
+  --danger-subtle: rgba(248, 113, 113, 0.12);
+  --info: #6EE7B7;
+  --info-subtle: rgba(110, 231, 183, 0.12);
+
+  /* 6. Elevation */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 2px 6px -1px rgba(0, 0, 0, 0.45);
+  --shadow-modal: 0 24px 42px -8px rgba(0, 0, 0, 0.7), 0 10px 18px -6px rgba(0, 0, 0, 0.5);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Arabic Typography Optical Tuning */
+  html[dir="rtl"] body {
+    font-family: var(--font-ibm-plex-arabic), var(--font-inter), system-ui, -apple-system, sans-serif;
+    line-height: 1.65;
+    letter-spacing: 0 !important;
+  }
+
+  html[dir="ltr"] body {
+    font-family: var(--font-inter), var(--font-ibm-plex-arabic), system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+  }
+
+  /* Tabular numerals for KPIs, health scores, dates, and SHA-256 hashes */
+  .num-tabular,
+  time,
+  .font-mono {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Accessible focus ring using Brand Forest Green & Gold */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

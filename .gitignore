@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# next
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# generated
+src/generated/
+
+# env & secrets
+.env
+.env.local
+.env.*.local
+.pgpass.local
+
+# local data
+.pgdata/
+storage/
+
+# tests
+test-results/
+playwright-report/
+coverage/
+e2e/.auth/
+
+# misc
+.DS_Store
+*.log
+
